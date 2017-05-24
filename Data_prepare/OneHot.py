@@ -1,3 +1,5 @@
+from sklearn.preprocessing import OneHotEncoder
+
 enc = OneHotEncoder()
 feats = ["creativeID", "adID", "camgaignID", "advertiserID", "appID", "appPlatform"]
 for i,feat in enumerate(feats):
