@@ -13,4 +13,45 @@ data1.groupby(['Bool', 'Dir']).apply(lambda x: x['Data'].cumsum())
 # Not this day                   
 data1.groupby(['Bool', 'Dir']).apply(lambda x: x['Data'].cumsum()-x['Data'])
 
+------------------
+Apply：
 
+# Author: kuhung (https://github.com/kuhung)
+# Created on: 2017/06/05
+
+
+
+def count_cumsum(df,label_groupby,label_taregt = 'label',flag = True):
+    
+    '''
+    df : DataFrame
+    label_groupby: The feature you concern.
+    label_target: Default is 'label'
+    
+    if flag == True:
+        then  do count
+    else:
+        do sum    
+    # key code
+    count = count.groupby(['%s'%label_groupby]).apply(lambda x : x['label'].cumsum()-x['label'])
+    '''
+    
+    if flag == True:
+        count = df.groupby(['%s'%label_groupby,'clickDate'],as_index = False)['label'].count()
+    else:
+        count = df.groupby(['%s'%label_groupby,'clickDate'],as_index = False)['label'].sum()
+        
+    count = count.set_index('clickDate')
+    
+    # key code
+    count = count.groupby(['%s'%label_groupby]).apply(lambda x : x['label'].cumsum()-x['label'])
+    
+    count.to_csv('../temp/count.csv')
+    count = pd.read_csv('../temp/count.csv',header=None)
+    
+    if flag == True:
+        count.columns = ['%s'%label_groupby,'clickDate','%s_count_c'%label_groupby]
+    else:
+        count.columns = ['%s'%label_groupby,'clickDate','%s_sum_c'%label_groupby]
+        
+    return count
