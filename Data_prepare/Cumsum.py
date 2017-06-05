@@ -1,5 +1,5 @@
 # Author：kuhung （https://github.com/kuhung）
-# Create time：2017/06/02
+# Create time：2017/06/05
 # According to：https://stackoverflow.com/questions/15755057/using-cumsum-in-pandas-on-group
 
 data1=pd.DataFrame({'Dir':['E','E','W','W','E','W','W','E'],
