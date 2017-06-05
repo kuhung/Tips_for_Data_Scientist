@@ -1,3 +1,7 @@
+
+
+# According to：https://stackoverflow.com/questions/15755057/using-cumsum-in-pandas-on-group
+
 data1=pd.DataFrame({'Dir':['E','E','W','W','E','W','W','E'],
                     'Bool':['Y','N','Y','N','Y','N','Y','N'], 
                     'Data':[4,5,6,7,8,9,10,11]}, 
@@ -8,3 +12,5 @@ data1.groupby(['Bool', 'Dir']).apply(lambda x: x['Data'].cumsum())
 
 # Not this day                   
 data1.groupby(['Bool', 'Dir']).apply(lambda x: x['Data'].cumsum()-x['Data'])
+
+
