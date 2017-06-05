@@ -13,7 +13,7 @@ features = train.drop(['label','id'], axis=1)
 data_dmat = xgb.DMatrix(data=features, label=labels)
 
 
-params={}
+params={'eval_metric':'logloss'}
 
 rounds = 50
 
