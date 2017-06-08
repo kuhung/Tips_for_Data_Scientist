@@ -1,8 +1,5 @@
-
-
-
-
-
+# Author kuhung(https://github.com/kuhung)
+# Create time: 2017/06/08
 
 
 gist = pd.DataFrame()
