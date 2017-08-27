@@ -1,4 +1,5 @@
-
+# Author kuhung(https://github.com/kuhung)
+# Create time: 2017/08/27
 
 ## 去除中文文本中标点符号的函数
 def cut_pun(contnet):
