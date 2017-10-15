@@ -9,3 +9,4 @@
 - [Predicting Housing Prices with Linear Regression using Python, pandas, and statsmodels](http://www.learndatasci.com/predicting-housing-prices-linear-regression-using-python-pandas-statsmodels/?imm_mid=0eddcf&cmp=em-data-na-na-newsltr_20170301#Multiple-Linear-Regression)
 - [https://github.com/analyticsvidhya/MiniDataHack](https://github.com/analyticsvidhya/MiniDataHack)
 - [A comprehensive beginner’s guide to create a Time Series Forecast (with Codes in Python)](https://www.analyticsvidhya.com/blog/2016/02/time-series-forecasting-codes-python/)
+  - [中文本]（https://my.oschina.net/zhiyonghe/blog/906307）
